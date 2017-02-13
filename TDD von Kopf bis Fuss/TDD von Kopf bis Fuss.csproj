@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FluentAssertions, Version=4.19.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
@@ -64,20 +66,25 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Spezifikation Bowling.feature.cs">
+    <Compile Include="Frame.cs" />
+    <Compile Include="FrameInBinding.cs" />
+    <Compile Include="LebowskiSpecial.cs" />
+    <Compile Include="LebowskiSpecialSteps.cs" />
+    <Compile Include="LebowskiSpecial.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Spezifikation Bowling.feature</DependentUpon>
+      <DependentUpon>LebowskiSpecial.feature</DependentUpon>
     </Compile>
+    <Compile Include="WurfInBindings.cs" />
     <Compile Include="Zuerst_mal_das.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="Spezifikation Bowling.feature">
+    <None Include="LebowskiSpecial.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Spezifikation Bowling.feature.cs</LastGenOutput>
+      <LastGenOutput>LebowskiSpecial.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Choose>
