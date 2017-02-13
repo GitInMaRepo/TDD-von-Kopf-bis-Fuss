@@ -23,5 +23,10 @@ namespace TDD_von_Kopf_bis_Fuss
         {
 
         }
+
+        internal Frame CreateFrame(string wurf1, string wurf2)
+        {
+            return null;
+        }
     }
 }

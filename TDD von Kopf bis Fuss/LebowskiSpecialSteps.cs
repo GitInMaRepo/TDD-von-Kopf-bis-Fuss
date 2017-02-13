@@ -18,9 +18,9 @@ namespace TDD_von_Kopf_bis_Fuss
             var max = game.Max(f => f.Nummer);
             for(int index = 1; index <= max; index += 2)
             {
-                var frame = new Frame();
-                frame.Roll1 = game.First(f => f.Nummer == index).Punkte;
-                frame.Roll2 = game.First(f => f.Nummer == index+1).Punkte;
+                var wurf1 = game.First(f => f.Nummer == index).Punkte;
+                var wurf2 = game.First(f => f.Nummer == index + 1).Punkte;
+                Frame frame = programm.CreateFrame(wurf1, wurf2);
                 programm.Add(frame);
             }
         }
