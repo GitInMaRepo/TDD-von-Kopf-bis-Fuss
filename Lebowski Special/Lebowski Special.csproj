@@ -42,10 +42,12 @@
   <ItemGroup>
     <Compile Include="BowlingCalculator.cs" />
     <Compile Include="BowlingOutput.cs" />
+    <Compile Include="DefaultFactory.cs" />
     <Compile Include="Frame.cs" />
     <Compile Include="BowlingService.cs" />
     <Compile Include="FramesInGame.cs" />
     <Compile Include="IBowlingCalculator.cs" />
+    <Compile Include="IBowlingFactory.cs" />
     <Compile Include="IBowlingOutput.cs" />
     <Compile Include="IBowlingService.cs" />
     <Compile Include="IFramesInGame.cs" />

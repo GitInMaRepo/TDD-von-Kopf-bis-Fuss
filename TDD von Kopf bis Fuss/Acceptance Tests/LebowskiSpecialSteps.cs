@@ -13,7 +13,9 @@ namespace TDD_von_Kopf_bis_Fuss
         [Given(@"ein Spieler wirft folgende Würfe")]
         public void AngenommenEinSpielerWirftFolgendeWurfe(Table table)
         {
-            IBowlingService programm = new BowlingService(new FramesInGame(), new BowlingCalculator(), new BowlingOutput());
+            var factory = new DefaultFactory();
+            factory.CreateObjects();
+            IBowlingService programm = new BowlingService(factory);
             ScenarioContext.Current.Set(programm);
             var game = table.CreateSet<WurfInBindings>();
             var max = game.Max(f => f.Nummer);

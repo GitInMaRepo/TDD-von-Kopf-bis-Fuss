@@ -5,22 +5,18 @@ namespace Lebowski_Special
 {
     public class BowlingService : IBowlingService
     {
-        private IFramesInGame framesInGame;
-        private IBowlingCalculator bowlingCalculator;
-        private IBowlingOutput bowlingOutput;
+        private IBowlingFactory bowlingFactory;
 
         private List<int> calculationResult { get; set; }
 
-        public BowlingService(IFramesInGame frames, IBowlingCalculator calculator, IBowlingOutput output)
+        public BowlingService(IBowlingFactory factory)
         {
-            framesInGame = frames;
-            bowlingCalculator = calculator;
-            bowlingOutput = output;
+            bowlingFactory = factory;
         }
 
         public void Add(Frame frame)
         {
-            framesInGame.AddFrame(frame);
+            bowlingFactory.framesInGame.AddFrame(frame);
         }
 
         public List<byte> GetLatestResult()
@@ -30,7 +26,7 @@ namespace Lebowski_Special
 
         public void CalculateGame()
         {
-            calculationResult = bowlingCalculator.Calculate();
+            calculationResult = bowlingFactory.bowlingCalculator.Calculate();
         }
 
         public Frame CreateFrame(string wurf1, string wurf2)
@@ -43,7 +39,7 @@ namespace Lebowski_Special
 
         public string GetOutput()
         {
-            return bowlingOutput.FormatOutput(calculationResult);
+            return bowlingFactory.bowlingOutput.FormatOutput(calculationResult);
         }
     }
 }
