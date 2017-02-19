@@ -40,8 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BowlingCalculator.cs" />
+    <Compile Include="BowlingOutput.cs" />
     <Compile Include="Frame.cs" />
     <Compile Include="BowlingService.cs" />
+    <Compile Include="FramesInGame.cs" />
+    <Compile Include="IBowlingCalculator.cs" />
+    <Compile Include="IBowlingOutput.cs" />
+    <Compile Include="IBowlingService.cs" />
+    <Compile Include="IFramesInGame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

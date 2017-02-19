@@ -13,7 +13,7 @@ namespace TDD_von_Kopf_bis_Fuss
         [Given(@"ein Spieler wirft folgende Würfe")]
         public void AngenommenEinSpielerWirftFolgendeWurfe(Table table)
         {
-            var programm = new BowlingService();
+            IBowlingService programm = new BowlingService(new FramesInGame(), new BowlingCalculator(), new BowlingOutput());
             ScenarioContext.Current.Set(programm);
             var game = table.CreateSet<WurfInBindings>();
             var max = game.Max(f => f.Nummer);
@@ -29,14 +29,14 @@ namespace TDD_von_Kopf_bis_Fuss
         [When(@"das Programm die Ausgabe berechnet")]
         public void WennDasProgrammDieAusgabeBerechnet()
         {
-            var programm = ScenarioContext.Current.Get<BowlingService>();
+            var programm = ScenarioContext.Current.Get<IBowlingService>();
             programm.CalculateGame();
         }
         
         [Then(@"soll folgendes Ergebnis herauskommen")]
         public void DannSollFolgendesErgebnisHerauskommen(Table table)
         {
-            var programm = ScenarioContext.Current.Get<BowlingService>();
+            var programm = ScenarioContext.Current.Get<IBowlingService>();
             List<byte> result = programm.GetLatestResult();
             var expectedPoints = table.CreateSet<FrameInBinding>();
             var max = expectedPoints.Max(f => f.Frame);

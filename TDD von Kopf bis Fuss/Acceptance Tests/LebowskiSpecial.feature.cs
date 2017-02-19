@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TDD_von_Kopf_bis_Fuss
+namespace TDD_von_Kopf_bis_Fuss.AcceptanceTests
 {
     using TechTalk.SpecFlow;
     
@@ -67,7 +67,7 @@ The dude doesn't abide:
             if (((testRunner.FeatureContext != null) 
                         && (testRunner.FeatureContext.FeatureInfo.Title != "Lebowski special")))
             {
-                TDD_von_Kopf_bis_Fuss.LebowskiSpecialFeature.FeatureSetup(null);
+                TDD_von_Kopf_bis_Fuss.AcceptanceTests.LebowskiSpecialFeature.FeatureSetup(null);
             }
         }
         
