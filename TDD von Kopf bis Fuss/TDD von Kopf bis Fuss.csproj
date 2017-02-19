@@ -66,9 +66,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Frame.cs" />
     <Compile Include="FrameInBinding.cs" />
-    <Compile Include="LebowskiSpecial.cs" />
     <Compile Include="LebowskiSpecialSteps.cs" />
     <Compile Include="LebowskiSpecial.feature.cs">
       <AutoGen>True</AutoGen>
@@ -86,6 +84,12 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LebowskiSpecial.feature.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lebowski Special\Lebowski Special.csproj">
+      <Project>{c33ede50-4fa3-4097-8de2-72d9e2e42a49}</Project>
+      <Name>Lebowski Special</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

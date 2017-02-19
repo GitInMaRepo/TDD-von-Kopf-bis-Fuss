@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Lebowski_Special;
 using System.Collections.Generic;
 using System.Linq;
 using TechTalk.SpecFlow;
@@ -12,7 +13,7 @@ namespace TDD_von_Kopf_bis_Fuss
         [Given(@"ein Spieler wirft folgende Würfe")]
         public void AngenommenEinSpielerWirftFolgendeWurfe(Table table)
         {
-            var programm = new LebowskiSpecial();
+            var programm = new BowlingService();
             ScenarioContext.Current.Set(programm);
             var game = table.CreateSet<WurfInBindings>();
             var max = game.Max(f => f.Nummer);
@@ -28,14 +29,14 @@ namespace TDD_von_Kopf_bis_Fuss
         [When(@"das Programm die Ausgabe berechnet")]
         public void WennDasProgrammDieAusgabeBerechnet()
         {
-            var programm = ScenarioContext.Current.Get<LebowskiSpecial>();
+            var programm = ScenarioContext.Current.Get<BowlingService>();
             programm.CalculateGame();
         }
         
         [Then(@"soll folgendes Ergebnis herauskommen")]
         public void DannSollFolgendesErgebnisHerauskommen(Table table)
         {
-            var programm = ScenarioContext.Current.Get<LebowskiSpecial>();
+            var programm = ScenarioContext.Current.Get<BowlingService>();
             List<byte> result = programm.GetLatestResult();
             var expectedPoints = table.CreateSet<FrameInBinding>();
             var max = expectedPoints.Max(f => f.Frame);
