@@ -1,6 +1,6 @@
-﻿namespace TDD_von_Kopf_bis_Fuss
+﻿namespace Lebowski_Special
 {
-    internal class Frame
+    public class Frame
     {
         public Frame()
         {

@@ -46,11 +46,19 @@
     <Compile Include="Frame.cs" />
     <Compile Include="BowlingService.cs" />
     <Compile Include="FramesInGame.cs" />
+<<<<<<< HEAD
     <Compile Include="Interfaces\IBowlingCalculator.cs" />
     <Compile Include="Interfaces\IBowlingFactory.cs" />
     <Compile Include="Interfaces\IBowlingOutput.cs" />
     <Compile Include="Interfaces\IBowlingService.cs" />
     <Compile Include="Interfaces\IFramesInGame.cs" />
+=======
+    <Compile Include="IBowlingCalculator.cs" />
+    <Compile Include="IBowlingFactory.cs" />
+    <Compile Include="IBowlingOutput.cs" />
+    <Compile Include="IBowlingService.cs" />
+    <Compile Include="IFramesInGame.cs" />
+>>>>>>> outside-in
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
