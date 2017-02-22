@@ -86,6 +86,8 @@
     <Compile Include="Acceptance Tests\WurfInBindings.cs" />
     <Compile Include="Architecture Tests\ArchitectureTestingFactory.cs" />
     <Compile Include="Architecture Tests\LebwoskiArchitectureTests.cs" />
+    <Compile Include="Micro Tests\FrameTests.cs" />
+    <Compile Include="Micro Tests\FramesInGameTests.cs" />
     <Compile Include="Micro Tests\Zuerst_mal_das.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
